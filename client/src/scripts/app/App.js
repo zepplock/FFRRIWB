@@ -40,7 +40,7 @@ let App = React.createClass({
                         <br/>
 
                         <p className="text-muted">
-                            <a href="">Browse the code on <i className="fa fa-github"></i> GitHub</a>
+                            <a href="https://github.com/zepplock/FFRRIWB">Browse the code on <i className="fa fa-github"></i> GitHub</a>
                         </p>
                     </div>
                 </footer>
