@@ -1,0 +1,17 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: FFRRIWB_production
+  pool: 5
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: FFRRIWB_development
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: FFRRIWB_development
+  pool: 5

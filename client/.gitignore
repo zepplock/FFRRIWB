@@ -1,0 +1,21 @@
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# App specific
+node_modules/
+.tmp
+dist
+
+.idea
+
+npm-debug.log

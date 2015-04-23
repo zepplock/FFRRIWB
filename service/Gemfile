@@ -1,0 +1,17 @@
+source 'https://rubygems.org'
+
+ruby '2.2.1'
+
+gem 'rails'
+gem 'rails-api'
+gem 'active_model_serializers', '~> 0.8.3' # NOTE: not the 0.9
+gem 'devise'
+gem 'pg'
+gem 'rack-cors',        require: 'rack/cors'
+gem 'thin'
+gem 'faker'
+
+group :development, :test do
+
+end
+
