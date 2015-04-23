@@ -1,11 +1,11 @@
 'use strict';
 
-import React from 'react/addons';
+import React from '../../../node_modules/react/addons';
 import Router from 'react-router';
-import FluxComponent from 'flummox/component';
+import FluxComponent from '../../../node_modules/flummox/component';
 import axios from 'axios';
 
-import UINavbar from './UI/Navbar';
+import UINavbar from './../components/UI/Navbar';
 
 const RouteHandler = Router.RouteHandler;
 

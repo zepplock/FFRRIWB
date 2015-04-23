@@ -4,12 +4,12 @@ import React from 'react';
 import Router from 'react-router';
 import Immutable from 'immutable';
 
-import { AppFlux } from '../flux/AppFlux';
+import { AppFlux } from './AppFlux';
 
 import App from './App';
-import HomePage from './Pages/Home';
-import TodosPage from './Pages/Todos';
-import StoriesPage from './Pages/Stories';
+import HomePage from './../components/Pages/Home';
+import TodosPage from './../components/Pages/Todos';
+import StoriesPage from './../components/Pages/Stories';
 
 try {
 

@@ -19,7 +19,7 @@ module.exports = {
   devtool: 'eval',
   entry: [
       'webpack/hot/only-dev-server',
-      './src/scripts/components/main.js'
+      './src/scripts/app/main.js'
   ],
 
   stats: {
@@ -58,7 +58,8 @@ module.exports = {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.IgnorePlugin(/vertx/)
   ]
 
 };
