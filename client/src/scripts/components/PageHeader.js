@@ -1,8 +1,8 @@
 'use strict';
 
-import React from 'react/addons';
+import React from '../../../node_modules/react/addons';
 
-let UIPageHeader = React.createClass({
+let PageHeader = React.createClass({
     render() {
         return (
             <div>
@@ -13,4 +13,4 @@ let UIPageHeader = React.createClass({
     }
 });
 
-module.exports = UIPageHeader;
+module.exports = PageHeader;

@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react/addons';
+import React from '../../../node_modules/react/addons';
 import {Link, State} from 'react-router';
 
 const cx = React.addons.classSet;

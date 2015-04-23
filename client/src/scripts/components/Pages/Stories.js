@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react/addons';
-import UIPageHeader from '../UI/PageHeader';
+import UIPageHeader from '../PageHeader';
 
 require('./stories.scss');
 
