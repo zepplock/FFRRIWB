@@ -1,20 +1,22 @@
 .pageheader i.fa-star {
-    color: #f1c40f;
+  color: #f1c40f;
 }
 
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
+
 body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
 }
+
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 60px;
-    background-color: #f5f5f5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
 }

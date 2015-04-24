@@ -5,31 +5,31 @@ import Immutable from 'immutable';
 
 export class UserStore extends Store {
 
-    constructor(flux) {
-        super();
+  constructor(flux) {
+    super();
 
-        this.setState(JSON.parse(sessionStorage.getItem('session')));
+    this.setState(JSON.parse(sessionStorage.getItem('session')));
 
-        const actionIds = flux.getActionIds('user');
-        this.register(actionIds.login, (session) => {
-            if (session.access_token) {
-                this.setState(session);
-                sessionStorage.setItem('session', JSON.stringify(session));
-            }
-        });
+    const actionIds = flux.getActionIds('user');
+    this.register(actionIds.login, (session) => {
+      if (session.access_token) {
+        this.setState(session);
+        sessionStorage.setItem('session', JSON.stringify(session));
+      }
+    });
 
-        this.register(actionIds.logout, () => {
-            this.setState(null);
-            sessionStorage.removeItem('session');
-        });
+    this.register(actionIds.logout, () => {
+      this.setState(null);
+      sessionStorage.removeItem('session');
+    });
 
-    }
+  }
 
-    getSession() {
-        return this.state;
-    }
+  getSession() {
+    return this.state;
+  }
 
-    isLoggedIn() {
-        return sessionStorage.getItem('session') !== null;
-    }
+  isLoggedIn() {
+    return sessionStorage.getItem('session') !== null;
+  }
 }
