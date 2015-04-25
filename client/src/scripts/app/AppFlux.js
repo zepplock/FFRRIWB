@@ -12,22 +12,16 @@ import { UserStore } from '../stores/UserStore';
 
 export class AppFlux extends Flux {
 
-  constructor(config) {
+  constructor() {
     super();
 
-    this.config = Immutable.fromJS(config);
-
     // The extra argument(s) are passed to the Action / Store constructors
-    this.createActions('todos', TodoActions, this.getApiendpoint());
+    this.createActions('todos', TodoActions);
     this.createStore('todos', TodoStore, this);
-    this.createActions('stories', StoryActions, this.getApiendpoint());
+    this.createActions('stories', StoryActions);
     this.createStore('stories', StoryStore, this);
-    this.createActions('user', UserActions, this.getApiendpoint());
+    this.createActions('user', UserActions);
     this.createStore('user', UserStore, this);
-  }
-
-  getApiendpoint() {
-    return this.config.get('apiendpoint');
   }
 
 }

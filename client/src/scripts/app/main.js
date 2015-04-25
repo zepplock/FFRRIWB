@@ -15,8 +15,7 @@ try {
 
   require('./main.scss');
 
-  const config = JSON.parse(window.unescape(document.getElementsByName('config/app')[0].content));
-  const flux = new AppFlux(config);
+  const flux = new AppFlux();
 
   const Route = Router.Route;
   const DefaultRoute = Router.DefaultRoute;

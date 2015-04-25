@@ -3,20 +3,19 @@
 import { Actions } from 'flummox';
 import axios from 'axios';
 
-let serverFetchStories = async function (apiendpoint) {
-  let stories = await axios.get(apiendpoint + '/stories');
+let serverFetchStories = async function () {
+  let stories = await axios.get('stories');
   return stories.data;
 };
 
 export class StoryActions extends Actions {
 
-  constructor(apiendpoint) {
+  constructor() {
     super();
-    this.apiendpoint = apiendpoint;
   }
 
   async fetchStories() {
-    return await serverFetchStories(this.apiendpoint);
+    return await serverFetchStories();
   }
 
 }

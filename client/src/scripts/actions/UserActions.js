@@ -3,20 +3,19 @@
 import { Actions } from 'flummox';
 import axios from 'axios';
 
-let serverLogin = async function (apiendpoint) {
-  let session = await axios.post(apiendpoint + '/login', {username: 'user1@example.com', password: 'password'});
+let serverLogin = async function () {
+  let session = await axios.post('login', {username: 'user1@example.com', password: 'password'});
   return session.data;
 };
 
 export class UserActions extends Actions {
 
-  constructor(apiendpoint) {
+  constructor() {
     super();
-    this.apiendpoint = apiendpoint;
   }
 
   async login() {
-    return await serverLogin(this.apiendpoint);
+    return await serverLogin();
   }
 
   async logout() {

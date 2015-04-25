@@ -18,7 +18,7 @@ module.exports = {
 
   debug: false,
   devtool: false,
-  entry: './src/scripts/app/main.js',
+  entry: './src/scripts/app/Main.js',
 
   stats: {
     colors: true,
@@ -30,7 +30,14 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.IgnorePlugin(/vertx/)
+    new webpack.IgnorePlugin(/vertx/),
+    new webpack.DefinePlugin({
+      __DEV__: 'false'
+    }),
+    new webpack.DefinePlugin({
+      __APIURL__: 'http://workloadcentral-api.herokuapp.com/v1/'
+    })
+
   ],
 
   resolve: {

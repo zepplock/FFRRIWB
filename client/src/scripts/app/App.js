@@ -18,6 +18,8 @@ let App = React.createClass({
       if (session) {
         config.headers = {'Authorization': session.access_token};
       }
+
+      config.url = __APIURL__ + config.url;
       return config;
     }, function (error) {
       // Do something with request error
