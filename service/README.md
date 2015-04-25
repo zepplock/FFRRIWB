@@ -17,3 +17,13 @@ Returns devise access token
 
 ### List my todos
 `http "localhost:3001/v1/todos" Authorization:2:HpFX8YQGCgR8hifQxezr`
+
+# Deployment
+This project can be deployed to Heroku
+
+  * Create a new heroku app
+  * `heroku run rake db:migrate`
+  * `heroku run rake db:seed`
+  *  build web app with `grunt build`
+  *  copy files from `client/build` to `service/public`
+  * `git subtree push --prefix service heroku master`
