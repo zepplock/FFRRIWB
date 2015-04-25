@@ -12,7 +12,7 @@ const RouteHandler = Router.RouteHandler;
 
 let App = React.createClass({
 
-  componentDidMount() {
+  componentWillMount() {
     axios.interceptors.request.use(function (config) {
       var session = JSON.parse(sessionStorage.getItem('session'));
       if (session) {
@@ -25,7 +25,6 @@ let App = React.createClass({
       // Do something with request error
       return Promise.reject(error);
     });
-
   },
 
   render() {
