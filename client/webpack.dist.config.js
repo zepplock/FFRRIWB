@@ -35,7 +35,7 @@ module.exports = {
       __DEV__: 'false'
     }),
     new webpack.DefinePlugin({
-      __APIURL__: 'http://workloadcentral-api.herokuapp.com/v1/'
+      __APIURL__: '"http://workloadcentral-api.herokuapp.com/v1/"'
     })
 
   ],
