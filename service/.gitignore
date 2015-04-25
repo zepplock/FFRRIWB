@@ -17,9 +17,6 @@
 .ruby-version
 .ruby-gemset
 
-# Ignore public
-/public/system/**
-
 # Mac stuff
 .DS_Store
 
