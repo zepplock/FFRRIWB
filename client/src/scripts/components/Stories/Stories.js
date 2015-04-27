@@ -2,7 +2,7 @@
 
 import React from '../../../../node_modules/react/addons';
 import UIPageHeader from '../PageHeader';
-import Story from './Story'
+import Story from './Story';
 
 let StoriesPage = React.createClass({
 
