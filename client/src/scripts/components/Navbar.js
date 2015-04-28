@@ -65,4 +65,8 @@ class UINavbar extends React.Component {
   }
 }
 
+UINavbar.contextTypes = {
+  router: React.PropTypes.func
+};
+
 module.exports = UINavbar;

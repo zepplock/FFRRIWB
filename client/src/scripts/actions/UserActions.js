@@ -19,5 +19,6 @@ export class UserActions extends Actions {
   }
 
   async logout() {
+    this.context.router.transitionTo('home');
   }
 }
