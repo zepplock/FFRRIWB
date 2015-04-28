@@ -3,8 +3,8 @@
 import { Actions } from 'flummox';
 import axios from 'axios';
 
-let serverLogin = async function () {
-  let session = await axios.post('login', {username: 'user1@example.com', password: 'password'});
+let serverLogin = async function (username, password) {
+  let session = await axios.post('login', {username: username, password: password});
   return session.data;
 };
 
@@ -14,11 +14,10 @@ export class UserActions extends Actions {
     super();
   }
 
-  async login() {
-    return await serverLogin();
+  async login(username, password) {
+    return await serverLogin(username, password);
   }
 
   async logout() {
-    this.context.router.transitionTo('home');
   }
 }
