@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Router from 'react-router';
-import FluxComponent from '../../../node_modules/flummox/component';
+import FluxComponent from 'flummox/component';
 import axios from 'axios';
 import Footer from '../components/Footer';
 
