@@ -1,8 +1,8 @@
 'use strict';
 
-import React from '../../../node_modules/react/addons';
+import React from 'react';
 
-let Footer = React.createClass({
+class Footer extends React.Component {
   render() {
     return (
       <footer>
@@ -15,6 +15,6 @@ let Footer = React.createClass({
       </footer>
     );
   }
-});
+}
 
 module.exports = Footer;

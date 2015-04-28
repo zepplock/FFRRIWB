@@ -1,6 +1,6 @@
 'use strict';
 
-import React from '../../../node_modules/react/addons';
+import React from 'react';
 import Router from 'react-router';
 import FluxComponent from '../../../node_modules/flummox/component';
 import axios from 'axios';

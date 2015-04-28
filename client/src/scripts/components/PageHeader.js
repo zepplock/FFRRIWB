@@ -1,6 +1,6 @@
 'use strict';
 
-import React from '../../../node_modules/react/addons';
+import React from 'react';
 
 let PageHeader = React.createClass({
   render() {
