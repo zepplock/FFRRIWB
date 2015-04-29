@@ -1,6 +1,7 @@
 # FFRRIWB
 
-Based on [Idiomatic React](https://github.com/netgusto/IdiomaticReact)
+## Live demo
+[Deployed to Heroku](http://ffrriwb.herokuapp.com)
 
 Currently, it uses:
 
@@ -11,6 +12,19 @@ Currently, it uses:
 * [Babel](https://babeljs.io/) for ES6/ES7 transpilation and linting;
 * [Webpack](http://webpack.github.io/) for the tooling and workflow management.
 
+What was added/perfected:
+Based on [Idiomatic React](https://github.com/netgusto/IdiomaticReact)
+
+*  Flummox used to simplify Flux
+*  Login modal dialog
+*  Token based authentication to a (Rails) API
+*  Async success/failure action handling
+*  React-bootstrap used to simplify UI
+*  Moved some objects to have ES6/ES7 style
+*  Full login/logout action/store/UI logic
+*  Example of access to private/public APIs, CRUD operations
+
+
 ## Install & run
 
 ```
@@ -18,7 +32,7 @@ npm install
 grunt serve
 ```
 
-Then navigate to [http://localhost:8000]()
+Then navigate to [http://localhost:8000/webpack-dev-server]
 
 ## License
 

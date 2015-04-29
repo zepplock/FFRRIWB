@@ -24,7 +24,7 @@ let HomePage = React.createClass({
 
         <p>FFRRIWB = Flux/Flummox, React/Router, Immutable, Webpack, Babel</p>
 
-        <p>Currently, it uses :</p>
+        <p><h4>Currently, it uses:</h4></p>
 
         <ul>
           <li><a href="http://facebook.github.io/react/">React</a> with <a
@@ -38,6 +38,23 @@ let HomePage = React.createClass({
           <li><a href="https://babeljs.io/">Babel</a> for ES6/ES7 transpilation and linting;</li>
           <li><a href="http://webpack.github.io/">Webpack</a> for the tooling.</li>
         </ul>
+
+        <hr/>
+
+        <p>
+          (Loosely) Based on <a href='https://github.com/netgusto/IdiomaticReact'>Idiomatic React</a>
+          <h4>What was added/perfected:</h4>
+          <ul>
+            <li>Flummox used to simplify Flux</li>
+            <li>Login modal dialog</li>
+            <li>Token based authentication to a (Rails) API</li>
+            <li>Async success/failure action handling</li>
+            <li>React-bootstrap used to simplify UI</li>
+            <li>Moved some objects to have ES6/ES7 style</li>
+            <li>Full login/logout action/store/UI logic</li>
+            <li>Example of access to private/public APIs, CRUD operations</li>
+          </ul>
+        </p>
       </div>
     );
   }
