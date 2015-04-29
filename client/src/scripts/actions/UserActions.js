@@ -14,10 +14,10 @@ export class UserActions extends Actions {
     super();
   }
 
-  async login(username, password) {
+  async loginAttempted(username, password) {
     return await serverLogin(username, password);
   }
 
-  async logout() {
+  async logoutAttempted() {
   }
 }

@@ -22,23 +22,18 @@ class TodoNavItem extends React.Component {
 
 class UINavbar extends React.Component {
 
-  loginlogout(e) {
+  logoutButtonPressed(e) {
     e.preventDefault();
 
-    if (this.props.flux.getStore('user').isLoggedIn()) {
-      this.props.flux.getActions('user').logout();
+      this.props.flux.getActions('user').logoutAttempted();
       this.context.router.transitionTo('home');
-    } else {
-      this.props.flux.getActions('user').login();
-    }
-
   }
 
   render() {
 
     var loginLogoutButton;
     if (this.props.flux.getStore('user').isLoggedIn()) {
-      loginLogoutButton = <a href="#" onClick={this.loginlogout.bind(this)}>Logout</a>;
+      loginLogoutButton = <a href="#" onClick={this.logoutButtonPressed.bind(this)}>Logout</a>;
     } else {
       loginLogoutButton = <ModalTrigger modal={<LoginModal {...this.props}/>}><a href="#">Login</a></ModalTrigger>;
     }

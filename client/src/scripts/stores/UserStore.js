@@ -11,14 +11,14 @@ export class UserStore extends Store {
     this.setState(JSON.parse(sessionStorage.getItem('session')));
 
     const actionIds = flux.getActionIds('user');
-    this.register(actionIds.login, (session) => {
+    this.register(actionIds.loginAttempted, (session) => {
       if (session.access_token) {
         this.setState(session);
         sessionStorage.setItem('session', JSON.stringify(session));
       }
     });
 
-    this.register(actionIds.logout, () => {
+    this.register(actionIds.logoutAttempted, () => {
       this.setState(null);
       sessionStorage.removeItem('session');
     });

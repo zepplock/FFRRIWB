@@ -11,10 +11,10 @@ class LoginModal extends React.Component {
     this.refs.username.getInputDOMNode().focus();
   }
 
-  logIn() {
+  loginButtonPressed() {
     var username = this.refs.username.getValue();
     var password = this.refs.password.getValue();
-    this.props.flux.getActions('user').login(username, password);
+    this.props.flux.getActions('user').loginAttempted(username, password);
   }
 
   render() {
@@ -28,7 +28,7 @@ class LoginModal extends React.Component {
           </form>
         </div>
         <div className='modal-footer'>
-          <Button onClick={this.logIn.bind(this)}>Log in</Button>
+          <Button onClick={this.loginButtonPressed.bind(this)}>Log in</Button>
           <Button onClick={this.props.onRequestHide}>Cancel</Button>
         </div>
       </Modal>
