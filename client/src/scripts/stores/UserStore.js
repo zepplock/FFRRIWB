@@ -1,7 +1,6 @@
 'use strict';
 
 import { Store } from 'flummox';
-import Immutable from 'immutable';
 
 export class UserStore extends Store {
 
@@ -14,18 +13,19 @@ export class UserStore extends Store {
     this.register(actionIds.loginAttempted, (session) => {
       if (session.access_token) {
         this.setState(session);
-        resetErrors();
+        this.setState({error: ''});
         sessionStorage.setItem('session', JSON.stringify(session));
       }
     });
 
     this.register(actionIds.loginFailed, (error) => {
-      this.setState({error: ('Login failed with error: ' + error.status)});
+      var errorMessage = error.status === 401? 'wrong username or password' : 'unknown error, please try again';
+      this.setState({error: ('Login failed with error: ' + errorMessage)});
     });
 
     this.register(actionIds.logoutAttempted, () => {
-      this.setState(null);
-      resetErrors();
+      this.setState({});
+      this.setState({error: ''});
       sessionStorage.removeItem('session');
     });
 
@@ -33,10 +33,6 @@ export class UserStore extends Store {
 
   getSession() {
     return this.state;
-  }
-
-  resetErrors(){
-    this.setState({error: ''});
   }
 
   isLoggedIn() {
