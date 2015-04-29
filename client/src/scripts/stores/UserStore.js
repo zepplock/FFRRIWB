@@ -14,12 +14,18 @@ export class UserStore extends Store {
     this.register(actionIds.loginAttempted, (session) => {
       if (session.access_token) {
         this.setState(session);
+        resetErrors();
         sessionStorage.setItem('session', JSON.stringify(session));
       }
     });
 
+    this.register(actionIds.loginFailed, (error) => {
+      this.setState({error: ('Login failed with error: ' + error.status)});
+    });
+
     this.register(actionIds.logoutAttempted, () => {
       this.setState(null);
+      resetErrors();
       sessionStorage.removeItem('session');
     });
 
@@ -27,6 +33,10 @@ export class UserStore extends Store {
 
   getSession() {
     return this.state;
+  }
+
+  resetErrors(){
+    this.setState({error: ''});
   }
 
   isLoggedIn() {

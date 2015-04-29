@@ -14,20 +14,21 @@ class LoginModal extends React.Component {
   loginButtonPressed() {
     var username = this.refs.username.getValue();
     var password = this.refs.password.getValue();
-    this.props.flux.getActions('user').loginAttempted(username, password);
+    this.props.flux.getActions('user').loginAttempted(this.props.flux, username, password);
   }
 
   render() {
     return (
       <Modal {...this.props} bsStyle='primary' title='Log in' animation={false}>
         <div className='modal-body'>
-          <p>Please provide your username/email and password</p>
+          <p>Please provide your username/email and passwordsss</p>
           <form className='form-horizontal'>
             <Input type='text' ref='username' label='Username' labelClassName='col-xs-2' wrapperClassName='col-xs-10' />
             <Input type='password' ref='password' label='Password' labelClassName='col-xs-2' wrapperClassName='col-xs-10' />
           </form>
         </div>
         <div className='modal-footer'>
+          <div className='pull-left'>{this.props.error}</div>
           <Button onClick={this.loginButtonPressed.bind(this)}>Log in</Button>
           <Button onClick={this.props.onRequestHide}>Cancel</Button>
         </div>
