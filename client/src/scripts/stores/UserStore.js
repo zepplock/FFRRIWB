@@ -19,7 +19,7 @@ export class UserStore extends Store {
     });
 
     this.register(actionIds.loginFailed, (error) => {
-      var errorMessage = error.status === 401? 'wrong username or password' : 'unknown error, please try again';
+      var errorMessage = error.status === 401 ? 'wrong username or password' : 'unknown error, please try again';
       this.setState({error: ('Login failed with error: ' + errorMessage)});
     });
 
